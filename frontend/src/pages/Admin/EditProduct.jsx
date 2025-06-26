@@ -142,7 +142,7 @@ const EditProduct = () => {
       {image && (
         <div className="text-center mb-4">
           <img
-            src={`https://snapbuy-backend-xxxx.onrender.com${image}`}
+            src={`${import.meta.env.VITE_API_URL}${image}`}
             alt={name}
             className="w-40 h-40 object-cover rounded mb-4"
           />

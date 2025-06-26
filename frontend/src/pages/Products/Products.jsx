@@ -84,7 +84,7 @@ const Products = () => {
           <div className="flex flex-wrap relative items-between mt-[2rem] ml-[10rem]">
             <div>
               <img
-                src={`https://snapbuy-backend-xxxx.onrender.com${product.image}`}
+                src={`${import.meta.env.VITE_API_URL}${product.image}`}
                 alt={product.name}
                 className="w-full h-40 object-cover rounded mb-2"
               />

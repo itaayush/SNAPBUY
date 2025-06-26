@@ -38,7 +38,7 @@ const Cart = () => {
                 {cartItems.map((item) => (
                   <div key={item._id} className="flex items-center bg-white rounded-xl p-4 shadow-sm border border-blue-100">
                     <img
-                      src={`https://snapbuy-backend-xxxx.onrender.com${item.image}`}
+                      src={`${import.meta.env.VITE_API_URL}${item.image}`}
                       alt={item.name}
                       className="w-16 h-16 object-cover rounded"
                     />
