@@ -13,16 +13,12 @@ import { addToCart } from "../../redux/features/cart/cartSlice";
 import {
   FaBox,
   FaClock,
-  FaShoppingCart,
   FaStar,
   FaStore,
 } from "react-icons/fa";
 import moment from "moment";
 import ProductInfoTabs from "./ProductInfoTabs";
 import HeartIcon from "./HeartIcon";
-import ProductProfile from "./ProductProfile";
-import CatalogCard from "./CatalogCard";
-import SingleProductBox from "./SingleProductBox";
 import ProductRatings from "./ProductRatings";
 
 const Products = () => {
@@ -88,9 +84,9 @@ const Products = () => {
           <div className="flex flex-wrap relative items-between mt-[2rem] ml-[10rem]">
             <div>
               <img
-                src={product.image}
+                src={`https://snapbuy-backend-xxxx.onrender.com${product.image}`}
                 alt={product.name}
-                className="w-full  xl:w-[50rem] lg:w-[45rem] md:w-[30rem] sm:w-[20rem] mr-[2rem]"
+                className="w-full h-40 object-cover rounded mb-2"
               />
               <HeartIcon product={product} />
             </div>
@@ -103,7 +99,6 @@ const Products = () => {
               <p className="text-5xl my-4 font-extrabold">
                 {product.price.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}
               </p>
-              {/* --------------------------------------------------- */}
 
               <div className="flex items-center justify-between w-[20rem]">
                 <div className="one">
@@ -160,7 +155,6 @@ const Products = () => {
                   Add To Cart
                 </button>
               </div>
-              {/* --------------------------------------------------- */}
             </div>
           </div>
 

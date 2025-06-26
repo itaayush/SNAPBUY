@@ -25,7 +25,7 @@ const AllProducts = () => {
         {products.map((product) => (
           <div key={product._id} className="bg-blue-50 rounded-lg shadow p-4 w-[22rem] mb-4 flex flex-col justify-between">
             <img
-              src={product.image}
+              src={`${import.meta.env.VITE_API_URL}${product.image}`}
               alt={product.name}
               className="w-full h-40 object-cover rounded mb-2"
             />

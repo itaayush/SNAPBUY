@@ -31,8 +31,8 @@ const AllOrder = () => {
                 <tr key={order._id} className={idx % 2 === 0 ? "bg-blue-50" : ""}>
                   <td className="px-4 py-2">
                     <img
-                      src={order.orderItems[0].image}
-                      alt={order._id}
+                      src={`${import.meta.env.VITE_API_URL}${order.orderItems[0].image}`}
+                      alt={order.orderItems[0].name}
                       className="w-16 h-16 object-cover rounded"
                     />
                   </td>

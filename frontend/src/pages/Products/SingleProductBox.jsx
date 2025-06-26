@@ -22,7 +22,7 @@ const SingleProductBox = ({ product }) => {
       <div className="w-32 h-32 flex-shrink-0 flex items-center justify-center">
         <Link to={`/product/${product._id}`}>
           <img
-            src={product.image}
+            src={`${import.meta.env.VITE_API_URL}${product.image}`}
             alt={product.name}
             className="w-28 h-28 object-cover rounded-lg hover:opacity-80 transition-opacity"
           />

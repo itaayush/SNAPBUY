@@ -6,7 +6,7 @@ const ProductTile = ({ product }) => {
     <div className="w-[30rem] ml-[2rem] p-3 relative bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200 border border-blue-100">
       <div className="relative">
         <img
-          src={product.image}
+          src={`${import.meta.env.VITE_API_URL}${product.image}`}
           alt={product.name}
           className="w-[30rem] rounded-t-xl"
         />

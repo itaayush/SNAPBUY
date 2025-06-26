@@ -32,15 +32,15 @@ const Cart = () => {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Cart Items */}
+            
             <div className="md:col-span-2">
               <div className="space-y-6">
                 {cartItems.map((item) => (
                   <div key={item._id} className="flex items-center bg-white rounded-xl p-4 shadow-sm border border-blue-100">
                     <img
-                      src={item.image}
+                      src={`https://snapbuy-backend-xxxx.onrender.com${item.image}`}
                       alt={item.name}
-                      className="w-20 h-20 object-cover rounded-lg border border-blue-50"
+                      className="w-16 h-16 object-cover rounded"
                     />
                     <div className="flex-1 ml-6">
                       <Link to={`/product/${item._id}`} className="text-lg font-bold text-blue-900 hover:underline">
@@ -75,7 +75,7 @@ const Cart = () => {
                 ))}
               </div>
             </div>
-            {/* Cart Summary */}
+            
             <div className="bg-white rounded-xl p-8 shadow-sm border border-blue-100 flex flex-col justify-between h-fit">
               <h2 className="text-xl font-bold text-blue-900 mb-4">Order Summary</h2>
               <div className="flex justify-between mb-2 text-blue-700 font-medium">

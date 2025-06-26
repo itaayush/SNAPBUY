@@ -15,7 +15,6 @@ import {
   FaStar,
   FaStore,
 } from "react-icons/fa";
-import moment from "moment";
 import HeartIcon from "./HeartIcon";
 import ProductRatings from "./ProductRatings";
 import ProductInfoTabs from "./ProductInfoTabs";
@@ -81,13 +80,13 @@ const ProductProfile = () => {
           </PopUp>
         ) : (
           <div className="flex flex-col md:flex-row gap-10 bg-white rounded-2xl shadow-lg p-8">
-            {/* Product Image */}
+            
             <div className="flex-1 flex flex-col items-center justify-center">
               <div className="relative w-full max-w-md">
                 <img
-                  src={product.image}
+                  src={`${import.meta.env.VITE_API_URL}${product.image}`}
                   alt={product.name}
-                  className="w-full h-96 object-contain rounded-xl border border-blue-100 shadow"
+                  className="w-full h-96 object-cover rounded-lg mb-6"
                 />
                 <div className="absolute top-4 right-4">
                   <HeartIcon product={product} />
@@ -95,7 +94,7 @@ const ProductProfile = () => {
               </div>
             </div>
 
-            {/* Product Details */}
+            
             <div className="flex-1 flex flex-col justify-between">
               <h2 className="text-3xl font-extrabold text-blue-900 mb-2">{product.name}</h2>
               <ProductRatings value={product.rating} text={`${product.numReviews} reviews`} />
@@ -130,7 +129,7 @@ const ProductProfile = () => {
           </div>
         )}
 
-        {/* Product Tabs (Reviews, etc.) */}
+        
         {!isLoading && !error && (
           <div className="mt-12">
             <ProductInfoTabs

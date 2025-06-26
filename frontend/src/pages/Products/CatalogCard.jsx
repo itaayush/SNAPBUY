@@ -25,7 +25,7 @@ const CatalogCard = ({ p }) => {
         <Link to={`/product/${p._id}`}> 
           <img
             className="w-full h-48 object-cover rounded-t-2xl group-hover:scale-105 transition-transform duration-200"
-            src={p.image}
+            src={`${import.meta.env.VITE_API_URL}${p.image}`}
             alt={p.name}
           />
         </Link>
