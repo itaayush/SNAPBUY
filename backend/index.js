@@ -26,7 +26,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: "https://snapbuy-gc7k.onrender.com",
+  origin: "https://snapbuy-frontend-2wx7.onrender.com",
   credentials: true
 }));
 
